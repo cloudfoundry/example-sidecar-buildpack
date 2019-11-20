@@ -5,9 +5,7 @@ include_files:
 - VERSION
 - bin/supply
 - bin/detect
-- bin/compile
 - manifest.yml
-- launch.yml
 language: sidecar
 stack: cflinuxfs3
 

@@ -9,10 +9,8 @@ DEPS_IDX=$4
 
 echo "-----> Running sidecar supply"
 
-export BUILDPACK_DIR=`dirname $(readlink -f ${BASH_SOURCE%/*})`
 
-pushd "$BUILDPACK_DIR"
-  echo '---
+echo '---
 processes:
 - type: "sidecar_process"
   command: "while true; do echo hello from a sidecar; sleep 10; done"
@@ -22,4 +20,3 @@ processes:
     cloudfoundry:
       sidecar_for: [ "web"]
 ' > "$DEPS_DIR"/"$DEPS_IDX"/launch.yml
-popd

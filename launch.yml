@@ -1,6 +1,0 @@
-processes:
-- type: "sidecar_process"
-  command: "while true; do echo 'hello from the outside'; sleep 10; done"
-  platforms:
-    cloudfoundry:
-      sidecar_for: [ "web"]

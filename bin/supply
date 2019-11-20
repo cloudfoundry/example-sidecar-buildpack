@@ -16,6 +16,8 @@ pushd "$BUILDPACK_DIR"
 processes:
 - type: "sidecar_process"
   command: "while true; do echo hello from a sidecar; sleep 10; done"
+  limits:
+    memory: 100
   platforms:
     cloudfoundry:
       sidecar_for: [ "web"]
